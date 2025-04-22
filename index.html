@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		function show()
+		{
+			var allcourse=document.getElementByName("course");
+			alert(allcourse.length);
+			var len=allcourse.length;
+			var ans="";
+			for (var i=0;i<len;i++)
+			{
+				if(allcourse[i].checked==true)
+				
+					ans=ans+allcourse[i].value+",";
+			}	
+					document.getElementById("res").innerHTML=ans;
+			
+		}
+	</script>
+</head>
+<body>
+<h1>select corse</h1>
+<input type="checkbox" name="course" value="c">C 
+<input type="checkbox" name="course" value="c++">C++
+<input type="checkbox" name="course" value="phython">PHYTHON
+<input type="checkbox" name="course" value="none of these above">NONE OF THESE ABOVE
+<button onclick="show()">show course</button>
+<div id="res"></div>
+</body>
+</html>
